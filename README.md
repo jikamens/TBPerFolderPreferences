@@ -6,8 +6,9 @@ For example, for some folders I want messages I view to be marked read automatic
 
 To use this extension, you install it, open its preferences, and add rules specifying regular expressions to match against the account name and folder path, and the corresponding preference names and values to set when there are matches. Leaving the account name and/or folder regexp blank in a rule causes it to apply to all accounts and/or folders. The first matching rule for any particular preference is used, so to specify a default value for a preference that you are changing for some accounts or folders, create a rule after all the other rules for that preference, with the account and folder regexps blank, the preference name, and its default value.
 
-# Home page
+# Home pages
 
+https://addons.thunderbird.net/thunderbird/addon/per-folder-preferences/
 https://github.com/jikamens/TBPerFolderPreferences
 
 # Author
