@@ -18,7 +18,7 @@ regexp blank in a rule causes it to apply to all accounts and/or
 folders. The first matching rule for any particular preference is
 used, so to specify a default value for a preference that you are
 changing for some accounts or folders, create a rule after all the
-other rules ofr that preference, with the account and folder regexps
+other rules for that preference, with the account and folder regexps
 blank, the preference name, and its default value.
 
 # Home page
