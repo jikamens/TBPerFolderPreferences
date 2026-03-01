@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Per Folder Preferences Settings</title>
+    <meta charset="utf-8">
+    <script src="options.js"></script>
+  </head>
+  <body>
+    <h1>Per Folder Preferences Settings</h1>
+    <p>Specify rules here for dynamically changing Thunderbird
+      preferences based on what folder is currently being viewed.
+      Leaving the account or folder regexp empty matches all accounts
+      and/or folders. The first matching rule for each preference is
+      used. To specify a default for a particular preference, add a
+      rule below all the others for that preference with the account
+      and folder regexp empty.</p>
+    <p>There are two ways to find out a preference name:</p>
+    <ol>
+      <li>Search for it in the advanced preference (open Thunderbird
+        Settings, click "General" on the left, scroll down to the
+        bottom, click "Config Editor...").</li>
+      <li>Quit Thunderbird, make a copy of prefs.js from your profile
+        directory, open Thunderbird, change the preference in the
+        Thunderbird settings, quit Thunderbird, and compare the copy
+        of prefs.js you made before with the current version in your
+        profile directory.</li>
+    </ol>
+    <table id="rules">
+      <tr id="headerRow">
+        <th>Account regexp</th>
+        <th>Folder regexp</th>
+        <th>Pref name</th>
+        <th>Pref value</th>
+      </tr>
+    </table>
+    
+    <p><input id="debugLogging" type="checkbox"></input>
+      <label for="debugLogging">Debug logging</label></p>
+    <p><input id="saveButton" type="submit" value="Save"></input>
+      <input id="exportButton" type="submit" value="Export"></input>
+      <input id="importButton" type="submit" value="Import"></input>
+      <span id="errorText" style="color: red"></span></p>
+
+    <h2>Sample accounts and folders</h2>
+    <table border id="sampleFoldersTable">
+      <tr>
+        <th>Account</th>
+        <th>Folder</th>
+      </tr>
+    </table>
+
+    <h2>Sample preferences</h2>
+    <p><a href="mailto:jik@kamens.us">Let me know</a> if you have
+      suggestions for preferences to add to this list!</p>
+    <table border id="samplePreferences">
+      <tr>
+        <th>Preference</th>
+        <th>Description</th>
+        <th>Values</th>
+      </tr>
+      <tr>
+        <td valign="top"><tt>mailnews.mark_message_read.auto</tt></td>
+        <td valign="top">Whether to mark messages read automatically
+          when you view them</td>
+        <td valign="top"><tt>true<br/>false</tt></td>
+      </tr>
+      <tr>
+        <td valign="top"><tt>mailnews.mark_message_read.delay</tt></td>
+        <td valign="top">Whether to delay before marking messages read
+          when you view them</td>
+        <td valign="top"><tt>true<br/>false</tt></td>
+      </tr>
+      <tr>
+        <td valign="top"><tt>mailnews.mark_message_read.delay.interval</tt></td>
+        <td valign="top">How long to delay before marking messages
+          read when you view them (if above preferences are both
+          true)</td>
+        <td valign="top">Number of seconds (integer)</td>
+      </tr>
+    </table>
+  </body>
+</html>

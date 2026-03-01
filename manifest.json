@@ -1,0 +1,38 @@
+{
+    "manifest_version": 2,
+    "name": "Per Folder Preferences",
+    "description": "Change Thunderbird preferences based on currently displayed folder",
+    "version": "0.1",
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "PerFolderPrefs@kamens.us",
+            "strict_min_version": "140.0"
+        }
+    },
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "options_ui": {
+        "page": "options.html",
+        "open_in_tab": true,
+        "browser_style": false
+    },
+    "permissions": [
+        "accountsFolders",
+        "accountsRead",
+        "activeTab",
+        "storage"
+    ],
+    "experiment_apis": {
+        "LegacyPrefs": {
+          "schema": "api/LegacyPrefs/schema.json",
+          "parent": {
+            "scopes": ["addon_parent"],
+            "paths": [["LegacyPrefs"]],
+            "script": "api/LegacyPrefs/implementation.js"
+          }
+        }
+    }
+}
